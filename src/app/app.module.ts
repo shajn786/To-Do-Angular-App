@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ToDoAddComponent } from './to-do-add/to-do-add.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ToDoAddComponent
   ],
   imports: [
     BrowserModule,
