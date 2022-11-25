@@ -1,10 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ToDoAddComponent } from './to-do-add/to-do-add.component';
 import { ToDoViewAllComponent } from './to-do-view-all/to-do-view-all.component';
+
+const myRoutes  : Routes=
+[
+  {
+    path:"",component:ToDoAddComponent
+  },
+  {
+    path:"viewall",component:ToDoViewAllComponent
+  }
+]
 
 @NgModule({
   declarations: [
@@ -14,7 +25,8 @@ import { ToDoViewAllComponent } from './to-do-view-all/to-do-view-all.component'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(myRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
